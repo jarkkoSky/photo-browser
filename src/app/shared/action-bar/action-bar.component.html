@@ -1,0 +1,17 @@
+<div class="action-bar">
+  <div class="action-bar-left">
+    <button class="back-button" *ngIf="enableBackButton" (click)="goBack()">
+      <i class="mdi mdi-arrow-left"></i>
+    </button>
+    <span class="action-bar-title">{{ title }}</span>
+  </div>
+
+  <mat-paginator
+    *ngIf="paginatorRef"
+    [length]="paginatorRef.pagination.total"
+    [pageSize]="paginatorRef.pagination.perPage"
+    [pageSizeOptions]="pageSizes"
+    (page)="pageChanged($event)"
+  >
+  </mat-paginator>
+</div>

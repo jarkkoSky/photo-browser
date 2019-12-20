@@ -1,0 +1,69 @@
+.albums-container {
+  display: flex;
+  flex-flow: wrap;
+  .album-container {
+    display: flex;
+    padding: 10px;
+    border: 1px solid #ececec;
+    border-radius: 5px;
+    margin: 5px;
+    flex: 1 30%;
+    background-color: white;
+
+    &:hover {
+      cursor: pointer;
+
+      .album-icon {
+        color: #229fe8;
+      }
+    }
+
+    .album-icon {
+      font-size: 5em;
+      color: #b9b9b9;
+      transition: all 0.2s;
+    }
+
+    .album-id {
+      padding: 10px;
+      font-size: 1.2em;
+    }
+
+    .album-info {
+      display: flex;
+      flex: 1;
+    }
+
+    .album-details {
+      display: flex;
+      flex-direction: column;
+      padding: 10px 10px 0px 10px;
+      margin-left: 20px;
+      flex: 1;
+
+      .album-details-row {
+        display: flex;
+        align-items: center;
+        font-size: 0.75em;
+        justify-content: flex-end;
+      }
+
+      .album-details-row-title {
+        flex: 1;
+        font-size: 1.25em;
+      }
+
+      .mdi-account-circle {
+        color: #b9b9b9;
+        font-size: 1.25em;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .album-container {
+    flex: 1 50% !important;
+  }
+}

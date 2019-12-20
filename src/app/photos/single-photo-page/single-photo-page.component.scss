@@ -1,0 +1,41 @@
+.container {
+  img {
+    max-width: 100%;
+    margin: 5px;
+  }
+
+  .photo-container {
+    display: flex;
+  }
+
+  .photo-info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    .photo-info-row {
+      padding: 5px;
+      margin: 5px;
+      border-radius: 5px;
+      border: 1px solid #ececec;
+      height: 40px;
+      display: flex;
+      align-items: center;
+
+      .photo-info-row-header {
+        padding-right: 10px;
+        padding-left: 10px;
+        width: 100px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .photo-container {
+    flex-direction: column !important;
+    font-size: 0.8em;
+  }
+  .photo-info-row {
+    padding: 0px !important;
+  }
+}

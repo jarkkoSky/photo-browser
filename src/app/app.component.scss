@@ -1,0 +1,19 @@
+.top-bar {
+    height: 35px;
+    position: fixed;
+    background-color: #229fe8;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+    color: white;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    box-shadow: 0px -3px 6px 3px black;
+
+    i {
+        margin-right: 10px;
+    }
+}

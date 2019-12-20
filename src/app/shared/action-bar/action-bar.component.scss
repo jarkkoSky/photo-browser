@@ -1,0 +1,57 @@
+.paginator-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #ececec;
+  border-radius: 5px;
+  height: 50px;
+
+  button {
+    margin: 2px;
+  }
+}
+
+.action-bar {
+  display: flex;
+  background-color: whitesmoke;
+  color: #6f6f6f;
+  margin: 5px;
+  border: 1px solid #ececec;
+  border-radius: 5px;
+
+  .action-bar-left {
+    display: flex;
+    flex: 1;
+  }
+
+  .action-bar-title {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    padding: 15px;
+    height: 30px;
+
+    justify-content: center;
+  }
+}
+
+.back-button {
+  font-size: 1.5em;
+  color: white;
+  border: none;
+  border-radius: 5px 0px 0px 5px;
+  width: 50px;
+  background-color: grey;
+}
+
+@media screen and (max-width: 768px) {
+  .action-bar {
+    flex-direction: column;
+  }
+  ::ng-deep .mat-paginator-page-size-label {
+    display: none !important;
+  }
+}

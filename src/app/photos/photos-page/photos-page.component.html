@@ -1,0 +1,34 @@
+<div *ngIf="album$ | async as album">
+  <app-action-bar
+    [paginatorRef]="paginatorRef"
+    [title]="album.title + ' by ' + (username(album.userId) | async)"
+    (paginatorChange)="pageChanged($event)"
+    [enableBackButton]="true"
+  ></app-action-bar>
+
+  <div class="loader-container" *ngIf="paginatorRef.isLoading$ | async">
+    <mat-spinner [color]="'primary'"></mat-spinner>
+  </div>
+
+  <ng-container *ngIf="photos$ | async as photos">
+    <section
+      class="photos-container"
+      *ngIf="(paginatorRef.isLoading$ | async) == false"
+    >
+      <div
+        class="photo-container"
+        [routerLink]="['/albums/', album.id, 'photos', photo.id]"
+        matRipple
+        *ngFor="let photo of photos.data"
+      >
+        <div class="photo-info">
+          <img src="{{ photo.thumbnailUrl }}" />
+
+          <div class="photo-details">
+            <span class="photo-details-row-title">{{ photo.title }}</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </ng-container>
+</div>

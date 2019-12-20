@@ -1,0 +1,23 @@
+<div class="container">
+  <app-action-bar [title]="" [enableBackButton]="true"></app-action-bar>
+
+  <div class="photo-container" *ngIf="photo$ | async as photo">
+    <div class="photo-image">
+      <img src="{{ photo.url }}" />
+    </div>
+    <div class="photo-info">
+      <div class="photo-info-row">
+        <span class="photo-info-row-header">Photo Title </span
+        ><span>{{ photo?.title }}</span>
+      </div>
+      <div class="photo-info-row">
+        <span class="photo-info-row-header">Album Title </span
+        ><span>{{ (album$ | async)?.title }}</span>
+      </div>
+      <div class="photo-info-row">
+        <span class="photo-info-row-header">Author</span
+        ><span>{{ username((album$ | async)?.userId) | async }}</span>
+      </div>
+    </div>
+  </div>
+</div>

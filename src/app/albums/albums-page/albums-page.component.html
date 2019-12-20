@@ -1,0 +1,38 @@
+<div>
+  <app-action-bar
+    [paginatorRef]="paginatorRef"
+    (paginatorChange)="pageChanged($event)"
+    [title]="'All Albums'"
+  ></app-action-bar>
+
+  <div class="loader-container" *ngIf="paginatorRef.isLoading$ | async">
+    <mat-spinner [color]="'primary'"></mat-spinner>
+  </div>
+
+  <div *ngIf="albums$ | async as albums">
+    <div
+      class="albums-container"
+      *ngIf="(paginatorRef.isLoading$ | async) == false"
+    >
+      <div
+        class="album-container"
+        [routerLink]="['/albums', album.id]"
+        matRipple
+        *ngFor="let album of albums.data"
+      >
+        <div class="album-info">
+          <i class="mdi mdi-image-album album-icon"></i>
+
+          <div class="album-details">
+            <span class="album-details-row-title">{{ album.title }}</span>
+
+            <span class="album-details-row"
+              ><i class="mdi mdi-account-circle"></i
+              >{{ username(album.userId) | async }}</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

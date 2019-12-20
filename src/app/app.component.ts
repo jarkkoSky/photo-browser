@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UsersService } from './state/users.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'photo-browser';
+
+  constructor(private usersService: UsersService) {
+    this.usersService.get();
+  }
 }
