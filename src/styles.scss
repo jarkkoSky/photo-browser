@@ -1,48 +1,22 @@
 @import '@mdi/font/css/materialdesignicons.css';
 
-/* You can add global styles to this file, and also import other style files */
 @font-face {
   font-family: 'roboto-light';
   src: url('./assets/Roboto-Light.ttf');
 }
 
-body {
-  background-color: #fbfbfb;
+html {
+  margin-top: 50px;
 }
 
-* {
+body {
+  background-color: #fbfbfb;
+  margin: 0;
   font-family: 'roboto-light';
 }
 
 button {
-  background-color: white;
-  box-shadow: none;
-  border: 0px;
-  color: white;
-  padding: 5px;
-  border: 1px solid #ececec;
-  border-radius: 5px;
-  color: black;
   cursor: pointer;
-
-  &.active {
-    color: #229fe8;
-  }
-}
-
-select {
-  border: 1px solid #ececec;
-  border-radius: 5px;
-  padding: 5px;
-  height: 27px;
-}
-html,
-body {
-  margin-top: 50px;
-}
-body {
-  margin: 0;
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
 
 .loader-container {
