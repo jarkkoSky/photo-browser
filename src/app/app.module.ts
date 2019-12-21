@@ -20,7 +20,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AppRoutingModule,
     AlbumsModule,
     PhotosModule,
-    environment.production ? [] : AkitaNgDevtools.forRoot(),
+    // environment.production ? [] : AkitaNgDevtools.forRoot(),
+    AkitaNgDevtools.forRoot(),
     AkitaNgRouterStoreModule.forRoot(),
     BrowserAnimationsModule
   ],
