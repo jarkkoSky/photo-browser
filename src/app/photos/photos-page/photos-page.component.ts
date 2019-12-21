@@ -72,6 +72,7 @@ export class PhotosPageComponent implements OnInit {
   pageChanged(event: PageEvent) {
     if (event.pageSize !== this.perPage) {
       this.perPage = event.pageSize;
+      this.paginatorRef.setPage(0);
       this.paginatorRef.refreshCurrentPage();
     } else {
       this.paginatorRef.setPage(event.pageIndex);
