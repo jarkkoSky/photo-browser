@@ -6,31 +6,39 @@
 
   .photo-container {
     display: flex;
-  }
 
-  .photo-info {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-
-    .photo-info-row {
-      padding: 5px;
-      margin: 5px;
-      border-radius: 5px;
-      border: 1px solid #ececec;
-      height: 40px;
+    .photo-image {
       display: flex;
-      align-items: center;
+      justify-content: center;
+    }
 
-      .photo-info-row-header {
-        padding-right: 10px;
-        padding-left: 10px;
-        width: 100px;
+    .photo-info {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+
+      .photo-info-row {
+        padding: 5px;
+        margin: 5px;
+        border-radius: 5px;
+        border: 1px solid #ececec;
+        height: 40px;
+        display: flex;
+        align-items: center;
+
+        .photo-info-row-header {
+          padding-right: 10px;
+          padding-left: 10px;
+          width: 100px;
+        }
+        .photo-info-row-text {
+          flex: 1;
+        }
       }
     }
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 968px) {
   .photo-container {
     flex-direction: column !important;
     font-size: 0.8em;
