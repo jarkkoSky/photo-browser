@@ -22,7 +22,9 @@
         *ngFor="let photo of photos.data"
       >
         <div class="photo-info">
-          <img src="{{ photo.thumbnailUrl }}" />
+          <div class="img-container">
+            <img src="{{ photo.thumbnailUrl }}" />
+          </div>
 
           <div class="photo-details">
             <span class="photo-details-row-title">{{ photo.title }}</span>

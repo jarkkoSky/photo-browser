@@ -1,6 +1,10 @@
 <div class="container">
   <app-action-bar [title]="" [enableBackButton]="true"></app-action-bar>
 
+  <div class="loader-container" *ngIf="!(photo$ | async)">
+    <mat-spinner [color]="'primary'"></mat-spinner>
+  </div>
+
   <div class="photo-container" *ngIf="photo$ | async as photo">
     <div class="photo-image">
       <img src="{{ photo.url }}" />
