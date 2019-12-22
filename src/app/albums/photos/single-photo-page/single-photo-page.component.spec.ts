@@ -4,6 +4,7 @@ import { SinglePhotoPageComponent } from './single-photo-page.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 describe('SinglePhotoPageComponent', () => {
   let component: SinglePhotoPageComponent;
@@ -12,7 +13,12 @@ describe('SinglePhotoPageComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [SinglePhotoPageComponent],
-      imports: [SharedModule, RouterTestingModule, HttpClientTestingModule]
+      imports: [
+        SharedModule,
+        RouterTestingModule,
+        HttpClientTestingModule,
+        MatProgressSpinnerModule
+      ]
     }).compileComponents();
   }));
 

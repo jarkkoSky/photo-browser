@@ -9,11 +9,14 @@
     margin: 5px;
     flex: 1 30%;
     background-color: white;
+    box-shadow: 0px 0px 8px -7px #000000;
 
-    transition: color 0.2s;
     &:hover {
       cursor: pointer;
-      color: #229fe8;
+
+      .photo-details-row-title {
+        color: #229fe8 !important;
+      }
     }
 
     .photo-info {
@@ -49,8 +52,11 @@
       }
 
       .photo-details-row-title {
+        transition: color 0.2s;
+
         flex: 1;
         font-size: 1.25em;
+        color: #6d6d6d;
       }
     }
   }
