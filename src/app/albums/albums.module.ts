@@ -14,7 +14,6 @@ import { SharedModule } from '../shared/shared.module';
     MatProgressSpinnerModule,
     MatRippleModule,
     SharedModule
-  ],
-  providers: []
+  ]
 })
 export class AlbumsModule {}

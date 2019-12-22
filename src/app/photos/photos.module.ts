@@ -15,7 +15,6 @@ import { RouterModule } from '@angular/router';
     MatRippleModule,
     SharedModule,
     RouterModule
-  ],
-  providers: []
+  ]
 })
 export class PhotosModule {}

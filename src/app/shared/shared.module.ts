@@ -7,7 +7,6 @@ import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [ActionBarComponent],
   imports: [CommonModule, MatPaginatorModule, RouterModule],
-  providers: [],
   exports: [ActionBarComponent]
 })
 export class SharedModule {}
