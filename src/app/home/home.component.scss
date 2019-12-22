@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #e2e2e2;
+  padding: 10px;
+
+  .title {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    color: #6d6d6d;
+    border-bottom: 1px solid #f3f3f3;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  .buttons-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 50px;
+
+    .credits {
+      display: flex;
+      color: #ababab;
+      align-items: center;
+      flex: 1;
+      font-size: 0.8em;
+    }
+
+    .mdi-arrow-right-drop-circle {
+      font-size: 1.5em;
+      margin-left: 10px;
+      color: #229fe8;
+    }
+  }
+}

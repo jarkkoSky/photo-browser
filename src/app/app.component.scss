@@ -1,19 +1,36 @@
 .top-bar {
+  height: 35px;
+  position: fixed;
+  background-color: #229fe8;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+  color: white;
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  box-shadow: 0px -3px 6px 3px black;
+
+  .mdi-camera-image {
+    margin-right: 10px;
+  }
+
+  .title-text {
+    cursor: pointer;
+    flex: 1;
+  }
+
+  .buttons-container {
+    width: 100px;
     height: 35px;
-    position: fixed;
-    background-color: #229fe8;
-    width: 100%;
-    top: 0;
-    z-index: 99;
-    color: white;
-    font-size: 1.1em;
     display: flex;
     align-items: center;
-    padding-left: 20px;
-    margin-bottom: 10px;
-    box-shadow: 0px -3px 6px 3px black;
-
-    i {
-        margin-right: 10px;
+    justify-content: center;
+    font-size: 1.1em;
+    a {
+      color: white;
     }
+  }
 }

@@ -3,7 +3,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { AlbumsModule } from './albums/albums.module';
-import { PhotosModule } from './photos/photos.module';
+import { PhotosModule } from './albums/photos/photos.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 

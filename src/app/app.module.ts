@@ -7,19 +7,22 @@ import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
 import { AkitaNgRouterStoreModule } from '@datorama/akita-ng-router-store';
 import { environment } from '../environments/environment';
 import { AlbumsModule } from './albums/albums.module';
-import { PhotosModule } from './photos/photos.module';
+import { PhotosModule } from './albums/photos/photos.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HomeComponent } from './home/home.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
-  declarations: [AppComponent, PageNotFoundComponent],
+  declarations: [AppComponent, PageNotFoundComponent, HomeComponent],
   imports: [
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     AlbumsModule,
     PhotosModule,
+    MatButtonModule,
     // environment.production ? [] : AkitaNgDevtools.forRoot(),
     AkitaNgDevtools.forRoot(),
     AkitaNgRouterStoreModule.forRoot(),

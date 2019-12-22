@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import { PaginationResponse } from '@datorama/akita';
 import { HttpParams, HttpClient } from '@angular/common/http';
 import { map, tap } from 'rxjs/operators';
-import { environment } from '../../../environments/environment';
+import { environment } from '../../../../environments/environment';
 import { PhotosStore } from './photos.store';
 import { Photo } from './photo.model';
 import { Album } from 'src/app/albums/state/album.model';

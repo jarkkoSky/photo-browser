@@ -1,0 +1,22 @@
+<div class="container">
+  <span class="title">Demo Application</span>
+
+  <span class="content">
+    This is a Photo browser application which uses mock data from
+    jsonplaceholder.typicode.com. The application is made with Angular 8 and it
+    uses Akita State Management. The goal was to make an application which is
+    efficient and well structured. Application state can be observed with Redux
+    DevTools on chrome.
+  </span>
+
+  <span class="content"
+    ><b>This page was added to demonstrate lazy loading.</b></span
+  >
+
+  <div class="buttons-container">
+    <span class="credits">© Jarkko Skyttälä 2019</span>
+    <button [routerLink]="['/albums']" mat-stroked-button>
+      To Demo <i class="mdi mdi-arrow-right-drop-circle"></i>
+    </button>
+  </div>
+</div>

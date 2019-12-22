@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AlbumsPageComponent } from './albums/albums-page/albums-page.component';
-import { PhotosPageComponent } from './photos/photos-page/photos-page.component';
-import { SinglePhotoPageComponent } from './photos/single-photo-page/single-photo-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AlbumsPageComponent } from './albums/albums-page/albums-page.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: '', component: AlbumsPageComponent },
-  { path: 'albums', component: AlbumsPageComponent },
-  { path: 'albums/:id', component: PhotosPageComponent },
-  { path: 'albums/:id/photos/:photoId', component: SinglePhotoPageComponent },
-  { path: '**', component: PageNotFoundComponent }
+  { path: '', component: HomeComponent },
+  {
+    path: 'albums',
+    loadChildren: () =>
+      import('./albums/albums.module').then(m => m.AlbumsModule)
+  },
+  { path: '*', component: PageNotFoundComponent }
 ];
 
 @NgModule({

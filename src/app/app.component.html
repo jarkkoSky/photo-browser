@@ -1,6 +1,11 @@
 <div class="top-bar">
-  <span style="cursor: pointer;" [routerLink]="['/albums']"
+  <span class="title-text" [routerLink]="['/']"
     ><i class="mdi mdi-camera-image"></i>Photo Browser</span
   >
+  <div class="buttons-container">
+    <a href="https://github.com/jarkkoSky/photo-browser">
+      <i class="mdi mdi-github-circle"></i
+    ></a>
+  </div>
 </div>
 <router-outlet></router-outlet>
