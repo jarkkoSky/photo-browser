@@ -11,7 +11,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./albums/albums.module').then(m => m.AlbumsModule)
   },
-  { path: '*', component: PageNotFoundComponent }
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
